@@ -12,8 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use("/api", router);
 
 app.get("/", (req, res) => {
-  var fullUrl =
-    req.protocol + "://" + req.get("host") + req.originalUrl + "api";
+  var fullUrl = req.protocol + "://" + req.get("host") + req.originalUrl + "api";
 
   res.status(200).send('<a href="' + fullUrl + '">' + fullUrl + "</a>");
 });
